@@ -49,8 +49,8 @@ public class Twinkle {
     public class func twinkle(_ view: UIView, image: UIImage? = nil) {
         var twinkleLayers: [TwinkleLayer] = []
         
-        let upperBound: UInt32 = 10
-        let lowerBound: UInt32 = 5
+        let upperBound: UInt32 = 40
+        let lowerBound: UInt32 = 20
         let count: UInt = UInt(arc4random_uniform(upperBound) + lowerBound)
         
         for i in 0..<count {
@@ -184,7 +184,7 @@ extension TwinkleLayer {
         fadeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         fadeAnimation.fromValue = 0
         fadeAnimation.toValue = 1
-        fadeAnimation.repeatCount = 2
+        fadeAnimation.repeatCount = MAXFLOAT
         
         fadeAnimation.autoreverses = true // fade in then out
         fadeAnimation.duration = 0.4
