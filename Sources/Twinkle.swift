@@ -99,7 +99,7 @@ internal class TwinkleLayer: CAEmitterLayer {
             twinkleImage = customImage
         } else {
             let frameworkBundle = Bundle(for: self.classForCoder)
-            if let imagePath = frameworkBundle.path(forResource: "TwinkleImage", ofType: "png") {
+            if let imagePath = frameworkBundle.path(forResource: "TwinkleImage2", ofType: "png") {
                 twinkleImage = UIImage(contentsOfFile: imagePath)
             }
         }
